@@ -5,53 +5,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <link rel="stylesheet" href="css.css">
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="image/myLogo.png" type="image/x-icon">
+    <title>Calculator-Arya</title>
 </head>
 
 <body>
-    <div class="calculator">
-        <input type="text" id="screen" maxlength="20">
-        <div class="calc-buttons">
-            <div class="layer-satu">
-                <button class="button tombol-dasar">C</button>
-                <button class="button hapus">Del</button>
-                <button class="button operasi-dasar">(</button>
-                <button class="button operasi-dasar">)</button>
-                <button class="button angka">1</button>
-                <button class="button angka">2</button>
-                <button class="button angka">3</button>
-                <button class="button operasi-dasar">/</button>
-                <button class="button angka">4</button>
-                <button class="button angka">5</button>
-                <button class="button angka">6</button>
-                <button class="button operasi-dasar">*</button>
-                <button class="button angka">7</button>
-                <button class="button angka">8</button>
-                <button class="button angka">9</button>
-                <button class="button operasi-dasar">-</button>
-                <button class="button sains">e</button>
-                <button class="button angka">0</button>
-                <button class="button sains">.</button>
-                <button class="button operasi-dasar">+</button>
-                <button class="button sains">sin</button>
-                <button class="button sains">cos</button>
-                <button class="button sains">tan</button>
-                <button class="button operasi-dasar">±</button>
-                <button class="button sains">x ²</button>
-                <button class="button sains">x !</button>
-                <button class="button sains">x^</button>
-                <button class="button operasi-dasar">%</button>
-                <button class="button sains">√</button>
-                <button class="button sains">log</button>
-                <button class="button sains">ln</button>
-                <button class="button sains">π</button>
-                <button class="button sains">∘</button>
-                <button class="button tombol-dasar sama-dengan">=</button>
-                <button class="button sains">rad</button>
+    <div class="calculator close">
+        <div class="header">
+            <i class="bx bx-chevron-right toggle"></i>
+        </div>
+        <div class="menu-bar">
+            <div class="menu">
+                <input type="text" id="screen" maxlength="20">
+                <div class="calc-buttons">
+                    <div class="layer-satu">
+                        <button class="button tombol-dasar">C</button>
+                        <button class="button hapus">Del</button>
+                        <button class="button operasi-dasar">(</button>
+                        <button class="button operasi-dasar">)</button>
+                        <button class="button angka">1</button>
+                        <button class="button angka">2</button>
+                        <button class="button angka">3</button>
+                        <button class="button operasi-dasar">/</button>
+                        <button class="button angka">4</button>
+                        <button class="button angka">5</button>
+                        <button class="button angka">6</button>
+                        <button class="button operasi-dasar">*</button>
+                        <button class="button angka">7</button>
+                        <button class="button angka">8</button>
+                        <button class="button angka">9</button>
+                        <button class="button operasi-dasar">-</button>
+                        <button class="button operasi-dasar">%</button>
+                        <button class="button angka">0</button>
+                        <button class="button operasi-dasar">.</button>
+                        <button class="button operasi-dasar">+</button>
+                        <button class="button tombol-dasar sama-dengan">=</button>
+                        <button class="button operasi-dasar">±</button>
+                        <button class="button sains hide">x ²</button>
+                        <button class="button sains hide">x !</button>
+                        <button class="button sains hide">x^</button>
+                        <button class="button sains hide">e</button>
+                        <button class="button sains hide">sin</button>
+                        <button class="button sains hide">cos</button>
+                        <button class="button sains hide">tan</button>
+                        <button class="button sains hide">√</button>
+                        <button class="button sains hide">log</button>
+                        <button class="button sains hide">ln</button>
+                        <button class="button sains hide">π</button>
+                        <button class="button sains hide">∘</button>
+                        <button class="button sains hide">rad</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+
+    <script src="script.js"></script>
     <script src="main.js"></script>
 </body>
 

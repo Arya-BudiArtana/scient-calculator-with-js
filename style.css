@@ -5,22 +5,14 @@
 }
 
 body {
-    height: 100vh;
     font-family: 'Open Sans', sans-serif;
-    background: black;
+    background: rgb(128, 61, 61);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bea2e7', endColorstr='#86b7e7',GradientType=0 );
     display: flex;
-    align-items: center;
     justify-content: center;
+
 }
 
-.calculator {
-    max-width: 430px;
-    background-color: rgb(253, 253, 253);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px auto;
-    }
     input[type=text] {
     width: 275px;
         height: 25px;
@@ -33,10 +25,10 @@ body {
     
     }
     .calc-buttons {
-        display: flex;
-    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;    
     justify-content: space-evenly;
-    
+    transition: all 0.3s ease;
     }
     .button {
     margin: 3px;
@@ -46,9 +38,10 @@ body {
     border-radius: 4px;
     color: #000000;
     cursor: pointer;
+    transition: all 0.3s ease;
     }
     .sama-dengan {
-        width: 130px;
+        width: 200px;
     }
     .hapus {
         background-color: rgb(219, 87, 87);
@@ -62,6 +55,8 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        transition: all 0.3s ease;
+
     }
     
     .tombol-dasar {
@@ -77,3 +72,50 @@ body {
     .sains {
         background-color: #b4da0b;
     }
+
+    
+.calculator {
+    top: 30vh;
+    position: fixed;
+    justify-content: center;
+    height: 380px;
+    width: 320px;
+    padding: 10px 14px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    opacity: 1;
+    background: #F6F5FF;
+}
+
+.calculator.close{
+    width: 320px;
+    height: 250px;
+}
+
+.calculator.close .hide{
+    opacity: 0;
+}
+
+.calculator .header {
+    position: relative;
+}
+.calculator .header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%) rotate(90deg);
+    height: 25px;
+    width: 25px;
+    background: #e0740e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    color: white;
+    font-size: 22px;
+}
+
+
+.calculator.close .header .toggle{
+    transform: translateY(-50%);
+}

@@ -1,3 +1,11 @@
+const body = document.querySelector("body"),
+      calculator = document.querySelector(".calculator"),
+      toggle = document.querySelector(".toggle");
+
+      toggle.addEventListener("click", () =>{
+          calculator.classList.toggle("close");
+      });
+
 var display = document.getElementById("screen");
 var buttons = document.getElementsByClassName("button");
   
