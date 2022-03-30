@@ -1,81 +1,18 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    background: rgb(128, 61, 61);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bea2e7', endColorstr='#86b7e7',GradientType=0 );
-    display: flex;
-    justify-content: center;
-
+  font-family: "Open Sans", sans-serif;
+  background: rgb(128, 61, 61);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bea2e7', endColorstr='#86b7e7',GradientType=0 );
+  display: flex;
+  justify-content: center;
 }
-
-    input[type=text] {
-    width: 275px;
-        height: 25px;
-        border-radius: 5px;
-        border: 0px;
-        background-color: #000000;
-        color: #d9d9d9;
-        padding: 0 5px 0 5px;
-        margin: 0 0px 10px 4px;
-    
-    }
-    .calc-buttons {
-    display: flex;
-    flex-wrap: wrap;    
-    justify-content: space-evenly;
-    transition: all 0.3s ease;
-    }
-    .button {
-    margin: 3px;
-    width: 63px;
-    border: none;
-    height: 25px;
-    border-radius: 4px;
-    color: #000000;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    }
-    .sama-dengan {
-        width: 200px;
-    }
-    .hapus {
-        background-color: rgb(219, 87, 87);
-    }
-    button:hover {
-      background-color: hsla(239, 100%, 40%, 0.3);
-      transition: .2s;
-    }
-    .layer-satu {
-        width: 280px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        transition: all 0.3s ease;
-
-    }
-    
-    .tombol-dasar {
-        background-color: #ffc266;
-    }
-    .angka {
-        background-color: #999999;
-    }
-    .operasi-dasar {
-        background-color: #3da0d1;
-    }
-    
-    .sains {
-        background-color: #b4da0b;
-    }
-
-    
 .calculator {
-    top: 30vh;
+    top: 20vh;
     position: fixed;
     justify-content: center;
     height: 380px;
@@ -84,25 +21,26 @@ body {
     transition: all 0.3s ease;
     white-space: nowrap;
     opacity: 1;
-    background: #F6F5FF;
-}
-
-.calculator.close{
+    background: #f6f5ff;
+    border-radius: 10px;
+  }
+  
+  .calculator.close {
     width: 320px;
     height: 250px;
-}
-
-.calculator.close .hide{
+  }
+  
+  .calculator.close .hide {
     opacity: 0;
-}
-
-.calculator .header {
+  }
+  
+  .calculator .header {
     position: relative;
-}
-.calculator .header .toggle {
+  }
+  .calculator .header .toggle {
     position: absolute;
     top: 50%;
-    right: -20px;
+    right: -26px;
     transform: translateY(-50%) rotate(90deg);
     height: 25px;
     width: 25px;
@@ -113,9 +51,67 @@ body {
     border-radius: 50px;
     color: white;
     font-size: 22px;
-}
-
-
-.calculator.close .header .toggle{
+  }
+  
+  .calculator.close .header .toggle {
     transform: translateY(-50%);
+  }
+  
+
+input[type="text"] {
+  width: 275px;
+  height: 25px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: #000000;
+  color: #d9d9d9;
+  padding: 0 5px 0 5px;
+  margin: 0 0px 10px 10px;
 }
+.calc-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  transition: all 0.3s ease;
+}
+.button {
+  margin: 3px;
+  width: 63px;
+  border: none;
+  height: 25px;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sama-dengan {
+  width: 200px;
+}
+.hapus {
+  background-color: rgb(219, 87, 87);
+}
+button:hover {
+  background-color: hsla(239, 100%, 40%, 0.3);
+  transition: 0.2s;
+}
+.layer-satu {
+  width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+}
+
+.tombol-dasar {
+  background-color: #ffc266;
+}
+.angka {
+  background-color: #999999;
+}
+.operasi-dasar {
+  background-color: #3da0d1;
+}
+
+.sains {
+  background-color: #b4da0b;
+}
+

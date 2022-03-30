@@ -1,36 +1,39 @@
 const body = document.querySelector("body"),
-      calculator = document.querySelector(".calculator"),
-      toggle = document.querySelector(".toggle");
+  calculator = document.querySelector(".calculator"),
+  toggle = document.querySelector(".toggle");
 
-      toggle.addEventListener("click", () =>{
-          calculator.classList.toggle("close");
-      });
+toggle.addEventListener("click", () => {
+  calculator.classList.toggle("close");
+});
 
 var display = document.getElementById("screen");
 var buttons = document.getElementsByClassName("button");
-  
-  Array.prototype.forEach.call(buttons, function(button) {
-  button.addEventListener("click", function() {
-    if (button.textContent != "=" && 
-    button.textContent != "C" && 
-    button.textContent != "x" && 
-    button.textContent != "÷" && 
-    button.textContent != "√" && 
-    button.textContent != "x ²" && 
-    button.textContent != "%" && 
-    button.textContent != "Del" && 
-    button.textContent != "±" && 
-    button.textContent != "sin" && 
-    button.textContent != "cos" && 
-    button.textContent != "tan" && 
-    button.textContent != "log" && 
-    button.textContent != "ln" && 
-    button.textContent != "x^" && 
-    button.textContent != "x !" && 
-    button.textContent != "π" && 
-    button.textContent != "e" && 
-    button.textContent != "rad" 
-    && button.textContent != "∘") {
+
+Array.prototype.forEach.call(buttons, function (button) {
+  button.addEventListener("click", function () {
+    if (
+      button.textContent != "=" &&
+      button.textContent != "C" &&
+      button.textContent != "x" &&
+      button.textContent != "÷" &&
+      button.textContent != "√" &&
+      button.textContent != "x ²" &&
+      button.textContent != "%" &&
+      button.textContent != "Del" &&
+      button.textContent != "±" &&
+      button.textContent != "sin" &&
+      button.textContent != "cos" &&
+      button.textContent != "tan" &&
+      button.textContent != "log" &&
+      button.textContent != "ln" &&
+      button.textContent != "x^" &&
+      button.textContent != "x !" &&
+      button.textContent != "π" &&
+      button.textContent != "e" &&
+      button.textContent != "rad" &&
+      button.textContent != "∘"&&
+      button.textContent != "mod"
+    ) {
       display.value += button.textContent;
     } else if (button.textContent === "=") {
       equals();
@@ -72,27 +75,31 @@ var buttons = document.getElementsByClassName("button");
       radians();
     } else if (button.textContent === "∘") {
       degrees();
+    }else if (button.textContent === "mod") {
+      mod();
     }
   });
 });
 
-
 function syntaxError() {
-  if (eval(display.value) == SyntaxError || eval(display.value) == ReferenceError || eval(display.value) == TypeError) {
+  if (
+    eval(display.value) == SyntaxError ||
+    eval(display.value) == ReferenceError ||
+    eval(display.value) == TypeError
+  ) {
     display.value == "Syntax Error";
   }
 }
 
-
 function equals() {
-  if ((display.value).indexOf("^") > -1) {
-    var base = (display.value).slice(0, (display.value).indexOf("^"));
-    var exponent = (display.value).slice((display.value).indexOf("^") + 1);
+  if (display.value.indexOf("^") > -1) {
+    var base = display.value.slice(0, display.value.indexOf("^"));
+    var exponent = display.value.slice(display.value.indexOf("^") + 1);
     display.value = eval("Math.pow(" + base + "," + exponent + ")");
   } else {
-    display.value = eval(display.value)
-    checkLength()
-    syntaxError()
+    display.value = eval(display.value);
+    checkLength();
+    syntaxError();
   }
 }
 
@@ -109,7 +116,7 @@ function multiply() {
 }
 
 function divide() {
-  display.value +=  "/";
+  display.value += "/";
 }
 
 function plusMinus() {
@@ -129,14 +136,14 @@ function factorial() {
   } else {
     var number = 1;
     for (var i = display.value; i > 0; i--) {
-      number *=  i;
+      number *= i;
     }
     display.value = number;
   }
 }
 
 function pi() {
-  display.value = (display.value * Math.PI);
+  display.value = display.value * Math.PI;
 }
 
 function square() {
@@ -185,4 +192,8 @@ function radians() {
 
 function degrees() {
   display.value = display.value * (180 / Math.PI);
+}
+
+function mod() {
+  display.value += "%"
 }
