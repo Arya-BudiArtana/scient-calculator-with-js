@@ -22,7 +22,7 @@ body {
     margin: 10px auto;
     }
     input[type=text] {
-    width: 315px;
+    width: 275px;
         height: 25px;
         border-radius: 5px;
         border: 0px;
@@ -71,9 +71,9 @@ body {
         background-color: #999999;
     }
     .operasi-dasar {
-        background-color: #80d4ff;
+        background-color: #3da0d1;
     }
     
     .sains {
-        background-color: #80ffff;
+        background-color: #b4da0b;
     }
