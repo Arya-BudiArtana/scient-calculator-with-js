@@ -1,6 +1,6 @@
 # scient-calculator-with-js
 
-calculator project made with javascript. Thi project is to meet the requirements for graduation from DiGi Talent Kominfo 2022.
+calculator project made with javascript. This project was made for requirements for graduation from DiGi Talent Kominfo 2022.
 
 Name: I Kadek Arya Budi Artana
 
